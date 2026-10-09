@@ -16,6 +16,8 @@ Un usuario no debe pertenecer a una sola empresa. Si yo trabajo en la Empresa A 
 user
 - id (UUIDv7 / no usar ID autoincremental)
 - nombre (varchar)
+- apellido_1 (varchar)
+- apellido_2 (varchar)
 - email (varchar)
 - contraseña 
 - fecha_creacion (timestamp)
@@ -35,16 +37,19 @@ tenants (las empresas o organizaciones)
 - telefono (varchar)
 - fecha_creacion (timestamp)
 - fecha_actualizacion (timestamp)
+- tipo_organizacion (varchar)
 - etc (otros campos adicionales que puedan ser necesarios)
+(guardar empresa;)
 
 tenants_usuarios (tabla pivote, quien pertenece a qué empresa)
 - user_id (UUIDv7 / no usar ID autoincremental)
-- tenant_id (UUIDv7 / no usar ID autoincremental)
+- tenant_id (UUIDv7 / no usar ID autoincremental; (FK))
 - fecha_creacion (timestamp)
 - fecha_actualizacion (timestamp)
 - rol (varchar) (ej. 'admin', 'miembro', 'invitado' con futuras acciones)
 - etc (otros campos adicionales que puedan ser necesarios)
 Primera key pertenece a user_id y la segunda a tenant_id.
+(que usuario pertenece a cual empresa;)
 
 ### Motor de Extensibilidad
 
