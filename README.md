@@ -14,6 +14,12 @@ Si desea leer la documentacion de como se va desarrollando la aplicacion, y el p
 
 Documentacion: [https://github.com/duohnson/credid-app/wiki](https://github.com/duohnson/credid-app/wiki)
 
+[ Stack de tecnología ]
+
+- TypeScript / React Native
+- Zed IDE + Expo
+- PostgreSQL + MySQL Workbench
+
 El software se encuentra open source bajo licencia GNU General Public License (GPL).
 Licencia: [https://www.gnu.org/licenses/gpl-3.0.html](https://www.gnu.org/licenses/gpl-3.0.html)
 La cual permite a cualquier persona usar, modificar y distribuir el software bajo los términos de la licencia GPL.

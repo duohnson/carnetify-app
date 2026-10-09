@@ -6,6 +6,9 @@ Para lograr esta flexibilidad, se usara PostgreSQL.
 
 Para evitar el cuello de botella en futuros registros y operaciones, se usa un metodo de arquitectura Multitenant (Multi-Inquilino) combinado con un diseño de esquema hibrido JSON para data dinamica.
 
+Video bueno que encontre sobre explicación Multi Tenant : [https://www.youtube.com/watch?v=x-nh-ZmaIHw](https://www.youtube.com/watch?v=x-nh-ZmaIHw)
+Creditos a su creador.
+
 ### Capa global para identidad.
 
 Un usuario no debe pertenecer a una sola empresa. Si yo trabajo en la Empresa A y voy al Gimnasio B, ambas deberían poder emitirme un carnet de CREDID hacia la misma cuenta y aplicación móvil.
@@ -21,11 +24,12 @@ user
 
 ### Capa Multitenant.
 
-Aquí viven las organizaciones (hospitales, universidades, corporativos) que pagan por tu SaaS.
+Aquí viven las organizaciones (hospitales, universidades, corporativos).
 
 tenants (las empresas o organizaciones)
-- id (UUIDv7 / no usar ID autoincremental)
+- id (UUIDv7 / no usar ID autoincremental) # Se utiliza binary(16), luego se realizara UUIDv7 desde backend.
 - nombre (varchar)
+- cedula_juridica (varchar) # Es varchar porque hay entidades de otros paises que usan alfanúmerico.
 - direccion (varchar)
 - email (varchar)
 - telefono (varchar)
