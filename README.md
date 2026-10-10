@@ -12,7 +12,7 @@ Repositorio: [https://github.com/duohnson/credid-app](https://github.com/duohnso
 
 Si desea leer la documentacion de como se va desarrollando la aplicacion, y el proyecto en general por favor lease en:
 
-Documentacion: [https://github.com/duohnson/credid-backend/wiki](https://github.com/duohnson/credid-backend/wiki)
+Documentacion: [https://github.com/duohnson/credid-backend/wiki-docs](https://github.com/duohnson/credid-backend/wiki-docs)
 
 [ Stack de tecnología ]
 
