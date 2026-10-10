@@ -17,8 +17,9 @@ user_id | tenant_id | rol
 101       500         empleado
 
 el usuario con id 101 es empleado en la organizacion con id 500
+),
 
-)
+Para ver la base, su estructura ir a: [https://github.com/duohnson/credid-app/wiki/base_de_datos/base_comentada.md](https://github.com/duohnson/credid-app/wiki/base_de_datos/base_comentada.md)
 
 ### Capa global para identidad.
 
