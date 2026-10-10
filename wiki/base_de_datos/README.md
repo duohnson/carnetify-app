@@ -9,6 +9,17 @@ Para evitar el cuello de botella en futuros registros y operaciones, se usa un m
 Video bueno que encontre sobre explicación Multi Tenant : [https://www.youtube.com/watch?v=x-nh-ZmaIHw](https://www.youtube.com/watch?v=x-nh-ZmaIHw)
 Creditos a su creador.
 
+(FK guarda un identificador que apunta a un registro en otra tabla, cada user tiene su identificador unico, 
+ejemplo: usuario 1 tiene identificador, y organizacion 1 tiene identificador, 
+usuario 1 conecta con organizacion 1 en tenant_usuarios, ellos conectan los identificadores de las tablas tenant_principal (las empresas), y usuarios,
+
+user_id | tenant_id | rol
+101       500         empleado
+
+el usuario con id 101 es empleado en la organizacion con id 500
+
+)
+
 ### Capa global para identidad.
 
 Un usuario no debe pertenecer a una sola empresa. Si yo trabajo en la Empresa A y voy al Gimnasio B, ambas deberían poder emitirme un carnet de CREDID hacia la misma cuenta y aplicación móvil.
@@ -60,7 +71,7 @@ carnets_reglas
 - descripcion (varchar)
 - fecha_creacion (timestamp)
 - fecha_actualizacion (timestamp)
-- schema_definition (JSONB) -> Aquí guardas las reglas. Ej: {"matricula": [{"nombre": "tipo_de_identificacion", "tipo": "string", "requerido": true}]}
+- reglas (JSONB) -> Aquí guardas las reglas. Ej: {"matricula": [{"nombre": "tipo_de_identificacion", "tipo": "string", "requerido": true}]}
 El objetivo de esta tabla es permitir que cada empresa defina sus propias reglas y estructuras de datos para los carnets, de manera que el sistema sea altamente extensible y adaptable a diferentes necesidades.
 
 credenciales (los carnets emitidos a los usuarios)
