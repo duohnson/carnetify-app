@@ -8,11 +8,16 @@ Entender que la aplicacion se encuentra en desarrollo, puede experimentar multip
 
 Si deseas contribuir al desarrollo de la aplicacion, puedes hacerlo a traves de nuestro repositorio en GitHub.
 
-Repositorio: [https://github.com/duohnson/credid-app](https://github.com/duohnson/credid-app)
-
 Si desea leer la documentacion de como se va desarrollando la aplicacion, y el proyecto en general por favor lease en:
+(La aplicación se esta desarrollando en 3 repositorios divididos, donde credid-app es la interfaz de aplicación, credid-backend el backend y APIS que unen la aplicación, y credid-web la versión web del sistema.)
 
-Documentacion: [https://github.com/duohnson/credid-backend/wiki-docs](https://github.com/duohnson/credid-backend/wiki-docs)
+Desarrollo app: [https://github.com/duohnson/credid-app/](https://github.com/duohnson/credid-app/)
+
+Backend: [https://github.com/duohnson/credid-backend/](https://github.com/duohnson/credid-backend/)
+
+Documentacion: [https://github.com/duohnson/credid-backend/tree/main/wiki-docs](https://github.com/duohnson/credid-backend/tree/main/wiki-docs)
+
+Que es, Para que sirve, e investigación sobre el mercado al que se enfoca CREDID: [https://github.com/duohnson/credid-backend/tree/main/wiki-docs/investigacion/CREDID.md](https://github.com/duohnson/credid-backend/tree/main/wiki-docs/investigacion/CREDID.md)
 
 [ Stack de tecnología ]
 
