@@ -1,4 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
+import { useState, useEffect } from 'react'; // state permite guardar info que puede cambiar en pant, effect: ejecut codigo cuando se carga el compont, entre mas cosas
 import { View, Image, Text, Pressable } from 'react-native';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,6 +10,21 @@ const CrearNavegante = createNativeStackNavigator();
 
 function CrearPantalla() {
   const UsarNavegante = useNavigation<any>();
+  const [estado, setEstado] = useState<number | null>(null);
+
+  useEffect(() => {
+    async function consultarBackend() {
+      try {
+        const respuesta = await fetch('https://carnetify.duohnson.com/');
+        // fetch utiliza peticion http, por defecto GET
+        setEstado(respuesta.status);
+      } catch (error) {
+        console.log('Error: ', error)
+      }
+    }
+    consultarBackend();
+  }, []);
+// }, []); pertenece al useEffect (() cerrando con []), ese ultimo ) es finalizar la cadena
 
   return (
     <View style={estilos.areaSegura}>
@@ -39,6 +55,8 @@ function CrearPantalla() {
             <Text style={estilos.textoTerciario}>Ingresar como organización</Text>
           </Pressable>
         </View>
+
+        <Text style={estilos.derechosAutor}>Estado: {estado ?? 'Consultando...'}</Text>
 
         <Text style={estilos.derechosAutor}>Desarrollado por Daniel Uohnson</Text>
       </View>
