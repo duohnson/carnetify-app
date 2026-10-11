@@ -20,7 +20,7 @@ function CrearPantalla() {
         <View style={estilos.carta}>
           <View style={estilos.filaMarca}>
             <Image source={require('./assets/carnet.png')} style={estilos.logoPequeno} />
-            <Text style={estilos.textoMarca}>CredID</Text>
+            <Text style={estilos.textoMarca}>Carnetify</Text>
           </View>
 
           <Image source={require('./assets/usuario.png')} style={estilos.imagen} />

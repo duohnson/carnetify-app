@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "credid-app",
-    "slug": "credid-app",
+    "name": "carnetify-app",
+    "slug": "carnetify-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
